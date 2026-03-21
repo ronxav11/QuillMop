@@ -1,9 +1,10 @@
 ---
+const base = import.meta.env.BASE_URL;
 const footerLinks = [
-  { label: "Services", href: "/#services" },
-  { label: "How It Works", href: "/#process" },
-  { label: "About", href: "/about" },
-  { label: "Contact", href: "/contact" },
+  { label: "Services", href: `${base}#services` },
+  { label: "How It Works", href: `${base}#process` },
+  { label: "About", href: `${base}about` },
+  { label: "Contact", href: `${base}contact` },
 ];
 ---
 
@@ -12,7 +13,7 @@ const footerLinks = [
     class="mx-auto flex max-w-7xl flex-col items-center gap-6 px-6 py-12 text-center lg:flex-row lg:justify-between lg:px-8 lg:text-left"
   >
     <div class="flex items-center gap-4">
-      <img src="/logo.png" alt="Quillmop" class="h-10 w-auto" />
+      <img src={`${base}logo.png`} alt="Quillmop" class="h-10 w-auto" />
       <span class="text-sm text-muted">— Let&rsquo;s clean up your content.</span>
     </div>
 

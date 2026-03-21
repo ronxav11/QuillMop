@@ -7,10 +7,11 @@ interface Props {
 }
 
 const { title, description, includes, slug } = Astro.props;
+const base = import.meta.env.BASE_URL;
 ---
 
 <a
-  href={`/services/${slug}`}
+  href={`${base}services/${slug}`}
   class="group block border border-border-light/20 bg-light p-8 transition-all duration-300 hover:-translate-y-1 hover:shadow-xl hover:shadow-dark/5 lg:p-10"
 >
   <h3

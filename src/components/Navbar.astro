@@ -1,9 +1,10 @@
 ---
+const base = import.meta.env.BASE_URL;
 const navLinks = [
-  { label: "Services", href: "/#services" },
-  { label: "How It Works", href: "/#process" },
-  { label: "About", href: "/about" },
-  { label: "Get in Touch", href: "/contact" },
+  { label: "Services", href: `${base}#services` },
+  { label: "How It Works", href: `${base}#process` },
+  { label: "About", href: `${base}about` },
+  { label: "Get in Touch", href: `${base}contact` },
 ];
 ---
 
@@ -14,8 +15,8 @@ const navLinks = [
   <div
     class="mx-auto flex max-w-7xl items-center justify-between px-6 py-3 lg:px-8 lg:py-4"
   >
-    <a href="/" class="flex-shrink-0">
-      <img src="/logo.png" alt="Quillmop" class="h-14 w-auto lg:h-16" />
+    <a href={base} class="flex-shrink-0">
+      <img src={`${base}logo.png`} alt="Quillmop" class="h-14 w-auto lg:h-16" />
     </a>
 
     <div class="hidden items-center gap-10 md:flex">

@@ -9,6 +9,7 @@ import { getCollection } from "astro:content";
 const services = (await getCollection("services")).sort(
   (a, b) => a.data.order - b.data.order
 );
+const base = import.meta.env.BASE_URL;
 ---
 
 <Layout title="Services — Quillmop" description="Explore Quillmop's full range of content and digital marketing services.">
@@ -33,7 +34,7 @@ const services = (await getCollection("services")).sort(
           {
             services.map((service) => (
               <a
-                href={`/services/${service.id}`}
+                href={`${base}services/${service.id}`}
                 class="group border-l-2 border-border-light pl-8 transition-all duration-300 hover:border-accent"
               >
                 <h2 class="font-display text-3xl text-dark transition-colors group-hover:text-accent-hover">
@@ -65,7 +66,7 @@ const services = (await getCollection("services")).sort(
           Let&rsquo;s talk. We&rsquo;ll help you figure out what your content needs.
         </p>
         <div class="mt-10">
-          <Button href="/contact">Get in Touch</Button>
+          <Button href={`${base}contact`}>Get in Touch</Button>
         </div>
       </div>
     </section>
