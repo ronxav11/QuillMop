@@ -1,0 +1,51 @@
+---
+import SectionLabel from "./SectionLabel.astro";
+
+const reasons = [
+  {
+    title: "No fluff, ever.",
+    description:
+      "Every word we write earns its place. If it doesn't serve your audience or your goals, it gets cut.",
+  },
+  {
+    title: "Strategy before everything.",
+    description:
+      "We won't touch a keyboard until we know exactly what your content needs to achieve. Good writing without strategy is just noise.",
+  },
+  {
+    title: "Built for businesses that mean business.",
+    description:
+      "Whether you're a ten-person startup or a thousand-person enterprise, we work at your pace, to your standards, at the level your brand demands.",
+  },
+  {
+    title: "Results you can actually measure.",
+    description:
+      "Traffic, leads, open rates, conversions — we tie every piece of content to numbers that matter to your bottom line.",
+  },
+];
+---
+
+<section class="bg-light py-24 lg:py-32">
+  <div class="mx-auto max-w-7xl px-6 lg:px-8">
+    <div data-animate>
+      <SectionLabel text="Why Us" light />
+    </div>
+
+    <h2 data-animate class="mt-4 max-w-3xl font-display text-4xl text-dark lg:text-6xl">
+      We don&rsquo;t just write. We deliver results.
+    </h2>
+
+    <div data-animate class="mt-16 grid gap-x-12 gap-y-12 md:grid-cols-2 lg:gap-x-20 lg:gap-y-16">
+      {
+        reasons.map((reason) => (
+          <div class="border-l-2 border-accent pl-8">
+            <h3 class="font-display text-2xl text-dark">{reason.title}</h3>
+            <p class="mt-3 text-base leading-relaxed text-muted">
+              {reason.description}
+            </p>
+          </div>
+        ))
+      }
+    </div>
+  </div>
+</section>

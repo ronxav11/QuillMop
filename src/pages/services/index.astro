@@ -1,0 +1,74 @@
+---
+import Layout from "../../layouts/Layout.astro";
+import Navbar from "../../components/Navbar.astro";
+import Footer from "../../components/Footer.astro";
+import SectionLabel from "../../components/SectionLabel.astro";
+import Button from "../../components/Button.astro";
+import { getCollection } from "astro:content";
+
+const services = (await getCollection("services")).sort(
+  (a, b) => a.data.order - b.data.order
+);
+---
+
+<Layout title="Services — Quillmop" description="Explore Quillmop's full range of content and digital marketing services.">
+  <Navbar />
+  <main>
+    <section class="bg-dark pt-36 pb-24 lg:pb-32">
+      <div class="mx-auto max-w-7xl px-6 lg:px-8">
+        <SectionLabel text="Our Services" />
+        <h1 class="mt-4 max-w-4xl font-display text-5xl text-light lg:text-7xl">
+          Everything your content needs. Nothing it doesn&rsquo;t.
+        </h1>
+        <p class="mt-6 max-w-2xl text-lg leading-relaxed text-light/50">
+          From strategy to execution, editing to optimisation — we cover every
+          angle of content and digital marketing.
+        </p>
+      </div>
+    </section>
+
+    <section class="bg-light py-24 lg:py-32">
+      <div class="mx-auto max-w-7xl px-6 lg:px-8">
+        <div class="grid gap-12 md:grid-cols-2">
+          {
+            services.map((service) => (
+              <a
+                href={`/services/${service.id}`}
+                class="group border-l-2 border-border-light pl-8 transition-all duration-300 hover:border-accent"
+              >
+                <h2 class="font-display text-3xl text-dark transition-colors group-hover:text-accent-hover">
+                  {service.data.title}
+                </h2>
+                <p class="mt-3 text-base leading-relaxed text-muted">
+                  {service.data.description}
+                </p>
+                <div class="mt-4 flex flex-wrap gap-2">
+                  {service.data.includes.map((item) => (
+                    <span class="inline-block border border-border-light bg-light-soft px-3 py-1 text-xs font-medium text-dark/60">
+                      {item.name}
+                    </span>
+                  ))}
+                </div>
+              </a>
+            ))
+          }
+        </div>
+      </div>
+    </section>
+
+    <section class="bg-dark py-24 text-center lg:py-32">
+      <div class="mx-auto max-w-3xl px-6 lg:px-8">
+        <h2 class="font-display text-4xl text-light lg:text-5xl">
+          Not sure where to start?
+        </h2>
+        <p class="mt-4 text-lg text-light/50">
+          Let&rsquo;s talk. We&rsquo;ll help you figure out what your content needs.
+        </p>
+        <div class="mt-10">
+          <Button href="/contact">Get in Touch</Button>
+        </div>
+      </div>
+    </section>
+  </main>
+  <Footer />
+</Layout>

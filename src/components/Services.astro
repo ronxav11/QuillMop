@@ -1,0 +1,110 @@
+---
+import SectionLabel from "./SectionLabel.astro";
+import ServiceCard from "./ServiceCard.astro";
+
+const services = [
+  {
+    title: "Content Marketing",
+    slug: "content-marketing",
+    description:
+      "We build content strategies that attract the right audience and keep them engaged. From blog posts to long-form guides, every piece has a purpose and a plan behind it.",
+    includes: ["Strategy", "Blog Writing", "Long-Form Articles", "Lead Magnets"],
+  },
+  {
+    title: "SEO Content",
+    slug: "seo-content",
+    description:
+      "Ranking on Google isn't luck — it's strategy. We create content built around the keywords your audience is actually searching for, structured to rank and written to convert.",
+    includes: [
+      "Keyword Research",
+      "On-Page SEO",
+      "SEO Copywriting",
+      "Meta Copy",
+      "Internal Linking Strategy",
+    ],
+  },
+  {
+    title: "AI Content Solutions",
+    slug: "ai-content-solutions",
+    description:
+      "We help businesses use AI the right way — responsibly, strategically, and without sacrificing quality. From AI-assisted content production to training your team on the right tools.",
+    includes: [
+      "AI Content Strategy",
+      "AI Tool Training",
+      "Human-AI Editing",
+      "Prompt Development",
+      "Content Scaling",
+    ],
+  },
+  {
+    title: "GEO — Generative Engine Optimisation",
+    slug: "geo-optimisation",
+    description:
+      "We optimise your content to appear in AI-generated answers on ChatGPT, Gemini, and Perplexity — the new frontier of search that most businesses are completely ignoring.",
+    includes: [
+      "AI Search Optimisation",
+      "Structured Content",
+      "Authority Building",
+      "Citation Strategy",
+      "Answer Engine Visibility",
+    ],
+  },
+  {
+    title: "Digital Marketing",
+    slug: "digital-marketing",
+    description:
+      "Clicks don't pay the bills — conversions do. We create digital campaigns across email, social, and search that are built to perform, not just look good on a report.",
+    includes: [
+      "Email Campaigns",
+      "Social Content",
+      "Paid Copy",
+      "Analytics",
+      "A/B Testing",
+    ],
+  },
+  {
+    title: "Editing & Proofreading",
+    slug: "editing-proofreading",
+    description:
+      "Your ideas are solid. Your execution needs work. Our editors sharpen your copy, fix your structure, and make sure every word you publish reflects the best version of your brand.",
+    includes: [
+      "Copy Editing",
+      "Structural Editing",
+      "Proofreading",
+      "Style Guides",
+      "Tone of Voice",
+    ],
+  },
+];
+---
+
+<section id="services" class="bg-light py-24 lg:py-32">
+  <div class="mx-auto max-w-7xl px-6 lg:px-8">
+    <div data-animate>
+      <SectionLabel text="What We Do" light />
+    </div>
+
+    <h2 data-animate class="mt-4 max-w-3xl font-display text-4xl text-dark lg:text-6xl">
+      Everything your content needs. Nothing it doesn&rsquo;t.
+    </h2>
+
+    <p data-animate class="mt-6 max-w-2xl text-lg leading-relaxed text-muted">
+      Whether you&rsquo;re a startup finding your voice or an enterprise
+      cleaning up years of content clutter, we have one job: make your content
+      work harder than it ever has.
+    </p>
+
+    <div data-animate class="mt-16 grid gap-6 md:grid-cols-2 lg:grid-cols-3">
+      {
+        services.map((service) => (
+          <ServiceCard
+            title={service.title}
+            description={service.description}
+            includes={service.includes}
+            slug={service.slug}
+          />
+        ))
+      }
+    </div>
+  </div>
+</section>

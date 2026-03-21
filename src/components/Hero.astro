@@ -1,0 +1,48 @@
+---
+import SectionLabel from "./SectionLabel.astro";
+import Button from "./Button.astro";
+---
+
+<section
+  class="relative flex min-h-screen items-center overflow-hidden bg-dark pt-28"
+>
+  <div class="absolute inset-0 opacity-[0.03]">
+    <div
+      class="h-full w-full"
+      style="background-image: repeating-linear-gradient(0deg, transparent, transparent 60px, rgba(255,255,255,0.1) 60px, rgba(255,255,255,0.1) 61px), repeating-linear-gradient(90deg, transparent, transparent 60px, rgba(255,255,255,0.1) 60px, rgba(255,255,255,0.1) 61px);"
+    >
+    </div>
+  </div>
+
+  <div class="relative mx-auto max-w-7xl px-6 py-24 lg:px-8 lg:py-32">
+    <div class="max-w-4xl">
+      <div data-animate>
+        <SectionLabel text="Content and Digital Marketing" />
+      </div>
+
+      <h1
+        data-animate
+        class="mt-6 font-display text-5xl leading-[1.05] text-light sm:text-6xl lg:text-8xl"
+        style="animation-delay: 0.15s;"
+      >
+        Your content is costing you customers.<br />
+        <span class="italic text-accent">Let&rsquo;s fix that.</span>
+      </h1>
+
+      <p
+        data-animate
+        class="mt-8 max-w-2xl text-lg leading-relaxed font-light text-light/60 lg:text-xl"
+        style="animation-delay: 0.3s;"
+      >
+        Quillmop helps businesses cut through the noise with content
+        that&rsquo;s sharp, strategic, and impossible to ignore. From first
+        draft to final publish, we clean it all up.
+      </p>
+
+      <div data-animate class="mt-12 flex flex-wrap items-center gap-6" style="animation-delay: 0.45s;">
+        <Button href="/#services">See Our Services</Button>
+        <Button href="/contact" variant="secondary">Talk To Us &rarr;</Button>
+      </div>
+    </div>
+  </div>
+</section>

@@ -1,0 +1,57 @@
+---
+import SectionLabel from "./SectionLabel.astro";
+
+const testimonials = [
+  {
+    quote:
+      "We hired Quillmop to clean up our blog. Three months later, organic traffic had tripled and our sales team was using our content in pitches. Game-changing.",
+    name: "Wale Larsen",
+    role: "Head of Marketing",
+    company: "Vidal Towers",
+  },
+  {
+    quote:
+      "Handed them a mess. Got back something brilliant. They didn't just edit our copy — they made us sound like the company we always wanted to be.",
+    name: "Marcus Osei",
+    role: "Founder",
+    company: "Folio Studio",
+  },
+  {
+    quote:
+      "Our email open rates jumped 38% in the first month. The content said the same things — just sharper, cleaner, and finally worth reading.",
+    name: "Priya Ravenwood",
+    role: "Director",
+    company: "Tenth & Pine",
+  },
+];
+---
+
+<section class="bg-dark-soft py-24 lg:py-32">
+  <div class="mx-auto max-w-7xl px-6 lg:px-8">
+    <div data-animate>
+      <SectionLabel text="What Our Clients Say" />
+    </div>
+
+    <h2 data-animate class="mt-4 font-display text-4xl text-light lg:text-6xl">
+      Don&rsquo;t take our word for it.
+    </h2>
+
+    <div data-animate class="mt-16 grid gap-8 md:grid-cols-3">
+      {
+        testimonials.map((t) => (
+          <blockquote class="flex flex-col justify-between border-t border-border pt-8">
+            <p class="font-display text-lg leading-relaxed text-light/80 italic lg:text-xl">
+              &ldquo;{t.quote}&rdquo;
+            </p>
+            <footer class="mt-8">
+              <p class="text-sm font-semibold text-accent">{t.name}</p>
+              <p class="mt-1 text-xs text-muted">
+                {t.role} &middot; {t.company}
+              </p>
+            </footer>
+          </blockquote>
+        ))
+      }
+    </div>
+  </div>
+</section>

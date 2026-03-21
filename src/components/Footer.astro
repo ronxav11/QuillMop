@@ -1,0 +1,36 @@
+---
+const footerLinks = [
+  { label: "Services", href: "/#services" },
+  { label: "How It Works", href: "/#process" },
+  { label: "About", href: "/about" },
+  { label: "Contact", href: "/contact" },
+];
+---
+
+<footer class="border-t border-border-light bg-light">
+  <div
+    class="mx-auto flex max-w-7xl flex-col items-center gap-6 px-6 py-12 text-center lg:flex-row lg:justify-between lg:px-8 lg:text-left"
+  >
+    <div class="flex items-center gap-4">
+      <img src="/logo.png" alt="Quillmop" class="h-10 w-auto" />
+      <span class="text-sm text-muted">— Let&rsquo;s clean up your content.</span>
+    </div>
+
+    <div class="flex flex-wrap justify-center gap-6 lg:gap-8">
+      {
+        footerLinks.map((link) => (
+          <a
+            href={link.href}
+            class="text-sm text-muted transition-colors duration-200 hover:text-accent-hover"
+          >
+            {link.label}
+          </a>
+        ))
+      }
+    </div>
+
+    <p class="text-xs text-muted/60">
+      &copy; {new Date().getFullYear()} Quillmop. All rights reserved.
+    </p>
+  </div>
+</footer>

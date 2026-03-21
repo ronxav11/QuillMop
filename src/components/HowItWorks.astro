@@ -1,0 +1,58 @@
+---
+import SectionLabel from "./SectionLabel.astro";
+
+const steps = [
+  {
+    number: "01",
+    title: "We Listen First",
+    description:
+      "Before we write a single word, we learn your business, your audience, and your goals. No assumptions. No templates. Just a clear picture of what your content needs to do.",
+  },
+  {
+    number: "02",
+    title: "We Build the Plan",
+    description:
+      "We map out exactly what to create, where to publish it, and how to measure success. You get a strategy you can see, understand, and hold us to.",
+  },
+  {
+    number: "03",
+    title: "We Get to Work",
+    description:
+      "Our writers and editors produce content that sounds like you — only sharper, cleaner, and more persuasive. Every draft goes through rigorous review before it reaches you.",
+  },
+  {
+    number: "04",
+    title: "We Track & Improve",
+    description:
+      "Publishing is just the beginning. We monitor performance and refine continuously so your content compounds in value over time.",
+  },
+];
+---
+
+<section id="process" class="bg-dark py-24 lg:py-32">
+  <div class="mx-auto max-w-7xl px-6 lg:px-8">
+    <div data-animate>
+      <SectionLabel text="The Process" />
+    </div>
+
+    <h2 data-animate class="mt-4 font-display text-4xl text-light lg:text-6xl">
+      Simple. Structured. Spotless.
+    </h2>
+
+    <div data-animate class="mt-16 grid gap-px bg-border md:grid-cols-2 lg:grid-cols-4">
+      {
+        steps.map((step) => (
+          <div class="bg-dark p-8 lg:p-10">
+            <span class="font-display text-5xl text-accent/30 lg:text-6xl">
+              {step.number}
+            </span>
+            <h3 class="mt-4 font-display text-xl text-light">{step.title}</h3>
+            <p class="mt-3 text-sm leading-relaxed text-light/50">
+              {step.description}
+            </p>
+          </div>
+        ))
+      }
+    </div>
+  </div>
+</section>

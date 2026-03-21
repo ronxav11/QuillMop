@@ -1,0 +1,182 @@
+---
+import Layout from "../layouts/Layout.astro";
+import Navbar from "../components/Navbar.astro";
+import Footer from "../components/Footer.astro";
+import SectionLabel from "../components/SectionLabel.astro";
+---
+
+<Layout title="Contact — Quillmop" description="Get in touch with Quillmop. The first conversation is free.">
+  <Navbar />
+  <main>
+    <section class="bg-dark pt-36 pb-24 lg:pb-32">
+      <div class="mx-auto max-w-7xl px-6 lg:px-8">
+        <SectionLabel text="Get in Touch" />
+        <h1
+          class="mt-4 max-w-4xl font-display text-5xl text-light lg:text-7xl"
+        >
+          Let&rsquo;s talk about your content.
+        </h1>
+        <p class="mt-6 max-w-2xl text-lg leading-relaxed text-light/50">
+          The first conversation is free. Tell us what you need and we&rsquo;ll
+          show you how we can help.
+        </p>
+      </div>
+    </section>
+
+    <section class="bg-light py-24 lg:py-32">
+      <div class="mx-auto max-w-7xl px-6 lg:px-8">
+        <div class="grid gap-16 lg:grid-cols-5">
+          <div class="lg:col-span-3">
+            <h2 class="font-display text-3xl text-dark">Send us a message</h2>
+            <form class="mt-8 space-y-6" id="contact-form">
+              <div class="grid gap-6 md:grid-cols-2">
+                <div>
+                  <label
+                    for="name"
+                    class="mb-2 block text-xs font-semibold uppercase tracking-wider text-muted"
+                    >Name</label
+                  >
+                  <input
+                    type="text"
+                    id="name"
+                    name="name"
+                    required
+                    class="w-full border border-border-light bg-light-soft px-4 py-3 text-sm text-dark outline-none transition-colors focus:border-accent"
+                    placeholder="Your name"
+                  />
+                </div>
+                <div>
+                  <label
+                    for="email"
+                    class="mb-2 block text-xs font-semibold uppercase tracking-wider text-muted"
+                    >Email</label
+                  >
+                  <input
+                    type="email"
+                    id="email"
+                    name="email"
+                    required
+                    class="w-full border border-border-light bg-light-soft px-4 py-3 text-sm text-dark outline-none transition-colors focus:border-accent"
+                    placeholder="you@company.com"
+                  />
+                </div>
+              </div>
+
+              <div>
+                <label
+                  for="company"
+                  class="mb-2 block text-xs font-semibold uppercase tracking-wider text-muted"
+                  >Company</label
+                >
+                <input
+                  type="text"
+                  id="company"
+                  name="company"
+                  class="w-full border border-border-light bg-light-soft px-4 py-3 text-sm text-dark outline-none transition-colors focus:border-accent"
+                  placeholder="Your company (optional)"
+                />
+              </div>
+
+              <div>
+                <label
+                  for="service"
+                  class="mb-2 block text-xs font-semibold uppercase tracking-wider text-muted"
+                  >Service you&rsquo;re interested in</label
+                >
+                <select
+                  id="service"
+                  name="service"
+                  class="w-full border border-border-light bg-light-soft px-4 py-3 text-sm text-dark outline-none transition-colors focus:border-accent"
+                >
+                  <option value="">Select a service (optional)</option>
+                  <option value="content-marketing">Content Marketing</option>
+                  <option value="seo-content">SEO Content</option>
+                  <option value="ai-content">AI Content Solutions</option>
+                  <option value="geo">GEO — Generative Engine Optimisation</option>
+                  <option value="digital-marketing">Digital Marketing</option>
+                  <option value="editing">Editing & Proofreading</option>
+                  <option value="not-sure">Not sure yet</option>
+                </select>
+              </div>
+
+              <div>
+                <label
+                  for="message"
+                  class="mb-2 block text-xs font-semibold uppercase tracking-wider text-muted"
+                  >Message</label
+                >
+                <textarea
+                  id="message"
+                  name="message"
+                  rows="5"
+                  required
+                  class="w-full resize-none border border-border-light bg-light-soft px-4 py-3 text-sm text-dark outline-none transition-colors focus:border-accent"
+                  placeholder="Tell us about your project and what you need..."></textarea>
+              </div>
+
+              <button
+                type="submit"
+                class="inline-block bg-accent px-8 py-4 text-sm font-semibold uppercase tracking-wider text-dark transition-all duration-300 hover:bg-accent-hover"
+              >
+                Send Message
+              </button>
+            </form>
+          </div>
+
+          <div class="lg:col-span-2">
+            <h2 class="font-display text-3xl text-dark">Or reach out directly</h2>
+            <div class="mt-8 space-y-8">
+              <div>
+                <h3
+                  class="text-xs font-semibold uppercase tracking-wider text-muted"
+                >
+                  Email
+                </h3>
+                <a
+                  href="mailto:hello@quillmop.com"
+                  class="mt-2 block text-lg font-medium text-dark transition-colors hover:text-accent"
+                >
+                  hello@quillmop.com
+                </a>
+              </div>
+
+              <div>
+                <h3
+                  class="text-xs font-semibold uppercase tracking-wider text-muted"
+                >
+                  Response time
+                </h3>
+                <p class="mt-2 text-base text-dark/70">
+                  We typically respond within 24 hours on business days.
+                </p>
+              </div>
+
+              <div class="border-t border-border-light pt-8">
+                <h3
+                  class="text-xs font-semibold uppercase tracking-wider text-muted"
+                >
+                  What to expect
+                </h3>
+                <ul class="mt-4 space-y-3 text-sm text-muted">
+                  <li class="flex items-start gap-3">
+                    <span class="mt-0.5 text-accent">01</span>
+                    <span>We&rsquo;ll reply to learn more about your needs</span>
+                  </li>
+                  <li class="flex items-start gap-3">
+                    <span class="mt-0.5 text-accent">02</span>
+                    <span>A free 30-minute discovery call</span>
+                  </li>
+                  <li class="flex items-start gap-3">
+                    <span class="mt-0.5 text-accent">03</span>
+                    <span>A tailored proposal with clear scope and pricing</span>
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+  <Footer />
+</Layout>

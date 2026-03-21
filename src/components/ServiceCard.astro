@@ -1,0 +1,33 @@
+---
+interface Props {
+  title: string;
+  description: string;
+  includes: string[];
+  slug: string;
+}
+
+const { title, description, includes, slug } = Astro.props;
+---
+
+<a
+  href={`/services/${slug}`}
+  class="group block border border-border-light/20 bg-light p-8 transition-all duration-300 hover:-translate-y-1 hover:shadow-xl hover:shadow-dark/5 lg:p-10"
+>
+  <h3
+    class="font-display text-2xl text-dark transition-colors duration-300 group-hover:text-accent-hover"
+  >
+    {title}
+  </h3>
+
+  <p class="mt-4 text-sm leading-relaxed text-muted">{description}</p>
+
+  <div class="mt-6 flex flex-wrap gap-2">
+    {
+      includes.map((item) => (
+        <span class="inline-block border border-border-light bg-light-soft px-3 py-1 text-xs font-medium tracking-wide text-dark/70">
+          {item}
+        </span>
+      ))
+    }
+  </div>
+</a>

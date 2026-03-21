@@ -1,0 +1,17 @@
+---
+interface Props {
+  text: string;
+  light?: boolean;
+}
+
+const { text, light = false } = Astro.props;
+---
+
+<span
+  class:list={[
+    "inline-block text-xs font-semibold uppercase tracking-[0.2em]",
+    light ? "text-muted" : "text-accent",
+  ]}
+>
+  {text}
+</span>

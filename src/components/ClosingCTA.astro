@@ -1,0 +1,34 @@
+---
+import SectionLabel from "./SectionLabel.astro";
+import Button from "./Button.astro";
+---
+
+<section class="relative overflow-hidden bg-dark py-24 lg:py-40">
+  <div
+    class="absolute inset-0 opacity-[0.04]"
+    style="background-image: radial-gradient(circle at 1px 1px, rgba(255,255,255,0.3) 1px, transparent 0); background-size: 40px 40px;"
+  >
+  </div>
+
+  <div class="relative mx-auto max-w-7xl px-6 text-center lg:px-8">
+    <div data-animate>
+      <SectionLabel text="Ready?" />
+    </div>
+
+    <h2 data-animate class="mx-auto mt-6 max-w-3xl font-display text-4xl text-light lg:text-7xl">
+      Your content should be working as hard as you do.
+    </h2>
+
+    <p data-animate class="mx-auto mt-8 max-w-xl text-lg leading-relaxed text-light/50">
+      Browse our services or get in touch today. The first conversation is free
+      — and it might be the most valuable one your brand has this year.
+    </p>
+
+    <div class="mt-12 flex flex-wrap items-center justify-center gap-6">
+      <Button href="/#services">See Our Services</Button>
+      <Button href="/contact" variant="secondary"
+        >Contact Us Directly &rarr;</Button
+      >
+    </div>
+  </div>
+</section>
