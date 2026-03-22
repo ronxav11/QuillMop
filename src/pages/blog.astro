@@ -1,0 +1,40 @@
+---
+import Layout from "../layouts/Layout.astro";
+import Navbar from "../components/Navbar.astro";
+import Footer from "../components/Footer.astro";
+import SectionLabel from "../components/SectionLabel.astro";
+import Button from "../components/Button.astro";
+const base = import.meta.env.BASE_URL;
+---
+
+<Layout title="Blog — Quillmop" description="Insights on content marketing, SEO, AI content strategy, and more from the Quillmop team.">
+  <Navbar />
+  <main>
+    <section class="bg-dark pt-36 pb-24 lg:pb-32">
+      <div class="mx-auto max-w-7xl px-6 lg:px-8">
+        <SectionLabel text="Blog" />
+        <h1 class="mt-4 max-w-4xl font-display text-5xl text-light lg:text-7xl">
+          Insights that earn their place.
+        </h1>
+        <p class="mt-6 max-w-2xl text-lg leading-relaxed text-light/50">
+          Thoughts on content strategy, SEO, AI, digital marketing, and
+          everything else we think is worth your time.
+        </p>
+      </div>
+    </section>
+
+    <section class="bg-light py-24 lg:py-32">
+      <div class="mx-auto max-w-3xl px-6 text-center lg:px-8">
+        <h2 class="font-display text-3xl text-dark">Coming soon</h2>
+        <p class="mt-4 text-lg text-muted">
+          Our first posts are in the works. Subscribe to be the first to read
+          them.
+        </p>
+        <div class="mt-10">
+          <Button href={`${base}contact`}>Get Notified</Button>
+        </div>
+      </div>
+    </section>
+  </main>
+  <Footer />
+</Layout>

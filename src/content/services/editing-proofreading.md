@@ -1,5 +1,5 @@
 ---
-title: "Editing & Proofreading"
+title: "Editing and Proofreading"
 shortTitle: "Editing"
 description: "Your ideas are solid. Your execution needs work. Our editors sharpen your copy, fix your structure, and make sure every word you publish reflects the best version of your brand."
 longDescription: "Great ideas deserve great execution. Whether it's a blog post that rambles, a website that doesn't convert, or a report full of inconsistencies — our editors fix it. We don't just catch typos. We restructure sentences, tighten arguments, improve flow, and ensure every piece of content you publish sounds polished, professional, and unmistakably you. From one-off projects to ongoing editorial partnerships, we make sure your words work as hard as your ideas."

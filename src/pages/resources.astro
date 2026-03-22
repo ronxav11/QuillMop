@@ -1,0 +1,41 @@
+---
+import Layout from "../layouts/Layout.astro";
+import Navbar from "../components/Navbar.astro";
+import Footer from "../components/Footer.astro";
+import SectionLabel from "../components/SectionLabel.astro";
+import Button from "../components/Button.astro";
+const base = import.meta.env.BASE_URL;
+---
+
+<Layout title="Resources — Quillmop" description="Free resources, guides, and tools from Quillmop to help your content work harder.">
+  <Navbar />
+  <main>
+    <section class="bg-dark pt-36 pb-24 lg:pb-32">
+      <div class="mx-auto max-w-7xl px-6 lg:px-8">
+        <SectionLabel text="Resources" />
+        <h1 class="mt-4 max-w-4xl font-display text-5xl text-light lg:text-7xl">
+          Tools and guides to sharpen your content.
+        </h1>
+        <p class="mt-6 max-w-2xl text-lg leading-relaxed text-light/50">
+          Free resources from the Quillmop team to help you create better
+          content, improve your strategy, and get more from every word you
+          publish.
+        </p>
+      </div>
+    </section>
+
+    <section class="bg-light py-24 lg:py-32">
+      <div class="mx-auto max-w-3xl px-6 text-center lg:px-8">
+        <h2 class="font-display text-3xl text-dark">Coming soon</h2>
+        <p class="mt-4 text-lg text-muted">
+          We&rsquo;re putting together guides, templates, and tools to help you
+          get the most out of your content. Check back soon.
+        </p>
+        <div class="mt-10">
+          <Button href={`${base}contact`}>Get Notified</Button>
+        </div>
+      </div>
+    </section>
+  </main>
+  <Footer />
+</Layout>
