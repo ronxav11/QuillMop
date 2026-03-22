@@ -2,10 +2,11 @@
 interface Props {
   href: string;
   variant?: "primary" | "secondary";
+  onLight?: boolean;
   class?: string;
 }
 
-const { href, variant = "primary", class: className } = Astro.props;
+const { href, variant = "primary", onLight = false, class: className } = Astro.props;
 ---
 
 {
@@ -25,7 +26,7 @@ const { href, variant = "primary", class: className } = Astro.props;
       href={href}
       class:list={[
         "inline-flex items-center gap-2 text-sm font-medium tracking-wide transition-colors duration-300",
-        "text-light/70 hover:text-accent",
+        onLight ? "text-dark/70 hover:text-accent-hover" : "text-light/70 hover:text-accent",
         className,
       ]}
     >

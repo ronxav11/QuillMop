@@ -1,0 +1,77 @@
+---
+import SectionLabel from "./SectionLabel.astro";
+const base = import.meta.env.BASE_URL;
+
+const industries = [
+  {
+    title: "AI and Technology",
+    slug: "ai-technology",
+    description:
+      "The AI space is crowded and moving fast. We help technology businesses communicate clearly enough to cut through it.",
+  },
+  {
+    title: "Legal",
+    slug: "legal",
+    description:
+      "Law firms have spent years building expertise. We make sure the right clients can find it, trust it, and act on it.",
+  },
+  {
+    title: "Healthcare and Allied Health",
+    slug: "healthcare",
+    description:
+      "From physiotherapists to private clinics, we help healthcare providers show up at the moment patients need them most.",
+  },
+  {
+    title: "Professional Services",
+    slug: "professional-services",
+    description:
+      "Accountants, consultants, and advisers sitting on extraordinary knowledge. We help them put it to work.",
+  },
+  {
+    title: "Construction and Architecture",
+    slug: "construction-architecture",
+    description:
+      "Remarkable work deserves to be seen beyond the projects that commissioned it. We build the content presence that makes that happen.",
+  },
+  {
+    title: "Manufacturing and Industrial",
+    slug: "manufacturing-industrial",
+    description:
+      "Long buying cycles reward businesses with a content presence. We build one for manufacturers that want to be found first.",
+  },
+];
+---
+
+<section id="industries" class="bg-light py-24 lg:py-32">
+  <div class="mx-auto max-w-7xl px-6 lg:px-8">
+    <div data-animate>
+      <SectionLabel text="Where We Work" light />
+      <h2 class="mt-4 font-display text-4xl text-dark lg:text-5xl">
+        Six industries. Deep expertise. Real results.
+      </h2>
+    </div>
+
+    <div class="mt-16 grid gap-6 md:grid-cols-2 lg:grid-cols-3">
+      {
+        industries.map((ind, i) => (
+          <a
+            href={`${base}industries/${ind.slug}`}
+            class="group block border border-border-light/20 bg-white p-8 transition-all duration-300 hover:-translate-y-1 hover:shadow-xl hover:shadow-dark/5 lg:p-10"
+            data-animate
+            style={`animation-delay: ${i * 80}ms`}
+          >
+            <h3 class="font-display text-2xl text-dark transition-colors duration-300 group-hover:text-accent-hover">
+              {ind.title}
+            </h3>
+            <p class="mt-4 text-sm leading-relaxed text-muted">
+              {ind.description}
+            </p>
+            <span class="mt-6 inline-flex items-center gap-1 text-sm font-medium text-accent transition-colors group-hover:text-accent-hover">
+              Explore {ind.title} &rarr;
+            </span>
+          </a>
+        ))
+      }
+    </div>
+  </div>
+</section>

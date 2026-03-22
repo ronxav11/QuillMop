@@ -1,0 +1,124 @@
+---
+import Layout from "../../layouts/Layout.astro";
+import Navbar from "../../components/Navbar.astro";
+import Footer from "../../components/Footer.astro";
+import SectionLabel from "../../components/SectionLabel.astro";
+import Button from "../../components/Button.astro";
+const base = import.meta.env.BASE_URL;
+
+const services = [
+  "Thought Leadership Programme",
+  "Service Page Copywriting",
+  "SEO and GEO Content Strategy",
+  "Email and Newsletter Campaigns",
+  "Content Audits",
+  "LinkedIn Content Strategy",
+  "Style Guides and Tone of Voice",
+];
+
+const helpItems = [
+  {
+    title: "Thought Leadership Content",
+    text: "We interview your partners, directors, and specialists and turn their knowledge into articles, guides, and commentary that build genuine authority in your market.",
+  },
+  {
+    title: "SEO and GEO Strategy",
+    text: "We identify what your prospective clients are searching for at every stage of their decision, and make sure your firm is the one answering those questions.",
+  },
+  {
+    title: "Service Page Copywriting",
+    text: "We rewrite your service pages to speak to client outcomes rather than firm capabilities, because clients don't buy services, they buy results.",
+  },
+  {
+    title: "Email and Newsletter Campaigns",
+    text: "We help firms stay top of mind with prospects and existing clients through consistent, intelligent communications that demonstrate ongoing value.",
+  },
+];
+---
+
+<Layout
+  title="Professional Services — Quillmop"
+  description="Content and marketing services for professional services firms. We turn what your firm knows into content that wins clients."
+>
+  <Navbar />
+  <main>
+    <section class="bg-dark pt-36 pb-24 lg:pb-32">
+      <div class="mx-auto max-w-7xl px-6 lg:px-8">
+        <a href={`${base}industries`} class="inline-flex items-center gap-2 text-sm text-muted transition-colors hover:text-accent">&larr; All Industries</a>
+        <SectionLabel text="Industry - Professional Services" />
+        <h1 class="mt-4 max-w-4xl font-display text-5xl text-light lg:text-7xl">
+          Your clients buy your expertise. Your content should prove you have it.
+        </h1>
+        <p class="mt-6 max-w-2xl text-lg leading-relaxed text-light/50">
+          The professional services firms growing their client base right now are the best at demonstrating what they do. Let&rsquo;s help you become one of them.
+        </p>
+      </div>
+    </section>
+
+    <section class="bg-light py-24 lg:py-32">
+      <div class="mx-auto max-w-7xl px-6 lg:px-8">
+        <SectionLabel text="What We See" light />
+        <h2 class="mt-4 max-w-4xl font-display text-3xl text-dark lg:text-5xl">
+          The firms that dominate professional services markets rarely got there by being the best kept secret.
+        </h2>
+        <div class="mt-8 max-w-3xl space-y-4 text-base leading-loose text-muted">
+          <p>They got there by making sure the right people had heard of them, read something from them, and already trusted them before the conversation even started.</p>
+          <p>The expertise sitting inside your firm is extraordinary. The way most firms communicate that expertise is not. Generic service pages, infrequent LinkedIn posts, and proposal documents that all sound the same as every competitor&rsquo;s.</p>
+          <p>In professional services, trust is built long before a prospect picks up the phone. It&rsquo;s built through the content they&rsquo;ve read, the thought leadership they&rsquo;ve followed, and the firm that made them feel understood before the first meeting. Most firms are invisible during that entire process.</p>
+        </div>
+      </div>
+    </section>
+
+    <section class="bg-dark py-24 lg:py-32">
+      <div class="mx-auto max-w-7xl px-6 lg:px-8">
+        <SectionLabel text="The Quillmop Approach" />
+        <h2 class="mt-4 max-w-4xl font-display text-4xl text-light lg:text-5xl">
+          We turn what your firm knows into content that wins clients before you&rsquo;ve said a word.
+        </h2>
+        <p class="mt-6 max-w-3xl text-base leading-relaxed text-light/50">
+          We work with professional services firms to extract the expertise that lives inside their teams and turn it into content that builds authority, generates enquiries, and shortens the sales cycle. Because a prospect who has already been educated by your content arrives at that first meeting halfway convinced.
+        </p>
+        <div class="mt-16 grid gap-8 md:grid-cols-2">
+          {helpItems.map((item) => (
+            <div class="border-l-2 border-accent pl-8">
+              <h3 class="font-display text-xl text-light">{item.title}</h3>
+              <p class="mt-3 text-sm leading-relaxed text-light/50">{item.text}</p>
+            </div>
+          ))}
+        </div>
+      </div>
+    </section>
+
+    <section class="bg-light py-24 lg:py-32">
+      <div class="mx-auto max-w-7xl px-6 lg:px-8">
+        <SectionLabel text="Real Results" light />
+        <h2 class="mt-4 max-w-3xl font-display text-4xl text-dark lg:text-5xl">
+          What happens when a professional services firm stops being invisible.
+        </h2>
+        <div class="mt-12 border border-border-light bg-white p-8 lg:p-12">
+          <span class="inline-block border border-border-light px-3 py-1 text-xs font-medium text-muted">Case Study</span>
+          <h3 class="mt-4 font-display text-2xl text-dark">An accounting firm that became the go-to voice in their niche</h3>
+          <p class="mt-4 text-base leading-loose text-muted">A mid-size accounting firm specialising in small business had no content presence and was winning new clients almost entirely through word of mouth. We built a thought leadership programme around their core expertise, produced bi-weekly articles targeting their ideal client profile, and optimised their service pages for search. Within eight months, they had been quoted in three industry publications, their organic traffic had grown by 180%, and new client enquiries had doubled.</p>
+        </div>
+      </div>
+    </section>
+
+    <section class="bg-dark py-24 lg:py-32">
+      <div class="mx-auto max-w-7xl px-6 lg:px-8">
+        <SectionLabel text="Built For You" />
+        <h2 class="mt-4 max-w-3xl font-display text-4xl text-light lg:text-5xl">
+          Content that positions your firm as the only logical choice.
+        </h2>
+        <div class="mt-12 grid gap-4 sm:grid-cols-2 lg:grid-cols-4">
+          {services.map((s) => (
+            <div class="border border-border bg-dark-soft px-5 py-4 text-sm text-light/70">{s}</div>
+          ))}
+        </div>
+        <div class="mt-12">
+          <Button href={`${base}contact`}>Talk To Us About Your Firm &rarr;</Button>
+        </div>
+      </div>
+    </section>
+  </main>
+  <Footer />
+</Layout>

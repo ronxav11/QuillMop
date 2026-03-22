@@ -1,0 +1,124 @@
+---
+import Layout from "../../layouts/Layout.astro";
+import Navbar from "../../components/Navbar.astro";
+import Footer from "../../components/Footer.astro";
+import SectionLabel from "../../components/SectionLabel.astro";
+import Button from "../../components/Button.astro";
+const base = import.meta.env.BASE_URL;
+
+const services = [
+  "Patient Education Articles",
+  "Service and Treatment Page Copywriting",
+  "SEO and GEO Content Strategy",
+  "Practitioner Thought Leadership",
+  "Email and Patient Communication Content",
+  "Content Audits",
+  "Tone of Voice and Style Guides",
+];
+
+const helpItems = [
+  {
+    title: "Patient Education Content",
+    text: "We create clear, accurate, and reassuring content that answers the questions your patients are already asking, positioning your practice as the trusted authority in your specialty.",
+  },
+  {
+    title: "SEO and GEO for Healthcare",
+    text: "We build content strategies around the specific conditions, treatments, and services your patients search for, including optimisation for AI search tools increasingly used to find healthcare providers.",
+  },
+  {
+    title: "Service and Treatment Pages",
+    text: "We rewrite your service pages to speak to patients clearly and compassionately, explaining what to expect and why your practice is the right choice.",
+  },
+  {
+    title: "Practitioner Thought Leadership",
+    text: "We help your clinicians build personal authority through articles, commentary, and guides that attract referrals and media attention.",
+  },
+];
+---
+
+<Layout
+  title="Healthcare and Allied Health — Quillmop"
+  description="Content and marketing services for healthcare providers. We turn clinical expertise into content that educates, builds trust, and fills appointment books."
+>
+  <Navbar />
+  <main>
+    <section class="bg-dark pt-36 pb-24 lg:pb-32">
+      <div class="mx-auto max-w-7xl px-6 lg:px-8">
+        <a href={`${base}industries`} class="inline-flex items-center gap-2 text-sm text-muted transition-colors hover:text-accent">&larr; All Industries</a>
+        <SectionLabel text="Industry - Healthcare and Allied Health" />
+        <h1 class="mt-4 max-w-4xl font-display text-5xl text-light lg:text-7xl">
+          Your patients are researching online before they ever book an appointment.
+        </h1>
+        <p class="mt-6 max-w-2xl text-lg leading-relaxed text-light/50">
+          From physiotherapists to psychologists, dietitians to private clinics, the practices growing fastest right now are the ones patients find when they search for their symptoms, their condition, or their fear. Is your practice one of them?
+        </p>
+      </div>
+    </section>
+
+    <section class="bg-light py-24 lg:py-32">
+      <div class="mx-auto max-w-7xl px-6 lg:px-8">
+        <SectionLabel text="What We See" light />
+        <h2 class="mt-4 max-w-4xl font-display text-3xl text-dark lg:text-5xl">
+          Healthcare professionals are sitting on expertise their patients are desperately searching for.
+        </h2>
+        <div class="mt-8 max-w-3xl space-y-4 text-base leading-loose text-muted">
+          <p>Every day, people search for answers to health questions that your practitioners could answer in their sleep. But most clinics and allied health professionals have websites that are outdated, content strategies that don&rsquo;t exist, and blogs that were last updated three years ago.</p>
+          <p>The result is that patients find generic, often inaccurate information from sources with no clinical credibility, and book with whoever happens to rank above you.</p>
+          <p>Trust is everything in healthcare. Content is how you build it before a patient ever walks through your door.</p>
+        </div>
+      </div>
+    </section>
+
+    <section class="bg-dark py-24 lg:py-32">
+      <div class="mx-auto max-w-7xl px-6 lg:px-8">
+        <SectionLabel text="The Quillmop Approach" />
+        <h2 class="mt-4 max-w-4xl font-display text-4xl text-light lg:text-5xl">
+          We turn clinical expertise into content that educates, builds trust, and fills appointment books.
+        </h2>
+        <p class="mt-6 max-w-3xl text-base leading-relaxed text-light/50">
+          We understand that healthcare content carries a higher responsibility than most. Everything we produce is written with accuracy, sensitivity, and compliance in mind, without losing the clarity and warmth that makes patients feel they&rsquo;re in the right hands.
+        </p>
+        <div class="mt-16 grid gap-8 md:grid-cols-2">
+          {helpItems.map((item) => (
+            <div class="border-l-2 border-accent pl-8">
+              <h3 class="font-display text-xl text-light">{item.title}</h3>
+              <p class="mt-3 text-sm leading-relaxed text-light/50">{item.text}</p>
+            </div>
+          ))}
+        </div>
+      </div>
+    </section>
+
+    <section class="bg-light py-24 lg:py-32">
+      <div class="mx-auto max-w-7xl px-6 lg:px-8">
+        <SectionLabel text="Real Results" light />
+        <h2 class="mt-4 max-w-3xl font-display text-4xl text-dark lg:text-5xl">
+          What happens when a healthcare practice invests in content.
+        </h2>
+        <div class="mt-12 border border-border-light bg-white p-8 lg:p-12">
+          <span class="inline-block border border-border-light px-3 py-1 text-xs font-medium text-muted">Case Study</span>
+          <h3 class="mt-4 font-display text-2xl text-dark">A psychology practice that stopped relying on referrals alone</h3>
+          <p class="mt-4 text-base leading-loose text-muted">A group psychology practice was almost entirely dependent on GP referrals for new patients. We built a content strategy around the conditions they treated, produced twenty patient-focused articles, and optimised every service page for search. Within six months, 35% of new patient enquiries were coming directly through organic search, reducing dependence on referral networks and cutting their cost per acquisition significantly.</p>
+        </div>
+      </div>
+    </section>
+
+    <section class="bg-dark py-24 lg:py-32">
+      <div class="mx-auto max-w-7xl px-6 lg:px-8">
+        <SectionLabel text="Built For You" />
+        <h2 class="mt-4 max-w-3xl font-display text-4xl text-light lg:text-5xl">
+          Content built around the trust your patients need to feel before they book.
+        </h2>
+        <div class="mt-12 grid gap-4 sm:grid-cols-2 lg:grid-cols-4">
+          {services.map((s) => (
+            <div class="border border-border bg-dark-soft px-5 py-4 text-sm text-light/70">{s}</div>
+          ))}
+        </div>
+        <div class="mt-12">
+          <Button href={`${base}contact`}>Talk To Us About Your Practice &rarr;</Button>
+        </div>
+      </div>
+    </section>
+  </main>
+  <Footer />
+</Layout>

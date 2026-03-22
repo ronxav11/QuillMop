@@ -1,0 +1,189 @@
+---
+import Layout from "../../layouts/Layout.astro";
+import Navbar from "../../components/Navbar.astro";
+import Footer from "../../components/Footer.astro";
+import SectionLabel from "../../components/SectionLabel.astro";
+import Button from "../../components/Button.astro";
+const base = import.meta.env.BASE_URL;
+
+const services = [
+  "Website and Product Copywriting",
+  "Messaging and Positioning",
+  "SEO and GEO Content Strategy",
+  "Thought Leadership Programme",
+  "Investor and Partner Communications",
+  "Educational Content and Guides",
+  "Content Audits",
+  "Tone of Voice and Style Guides",
+];
+
+const helpItems = [
+  {
+    title: "Messaging and Website Copywriting",
+    text: "We help AI businesses find the clearest, most compelling way to explain what they do, who it's for, and why it matters, in language that resonates with buyers, investors, and partners alike.",
+  },
+  {
+    title: "SEO and GEO Content Strategy",
+    text: "We build content strategies around the questions your buyers are asking at every stage of their research, including optimisation for AI search tools, which is particularly critical for businesses operating in this space.",
+  },
+  {
+    title: "Thought Leadership and Industry Commentary",
+    text: "We help founders, CTOs, and product leads build personal authority and brand credibility through articles, commentary, and guides that position them as genuine voices in the AI conversation.",
+  },
+  {
+    title: "Investor and Partner Communications",
+    text: "We help AI businesses communicate their vision, traction, and differentiation clearly and compellingly to the audiences that matter most beyond their customers.",
+  },
+  {
+    title: "Educational Content",
+    text: "We produce guides, explainers, and resources that help your buyers understand not just what your product does but why it matters, reducing friction in the sales process and building trust before the first conversation.",
+  },
+];
+---
+
+<Layout
+  title="AI and Technology — Quillmop"
+  description="Content and marketing services for AI and technology businesses. We translate complex technology into language that makes buyers act."
+>
+  <Navbar />
+  <main>
+    <section class="bg-dark pt-36 pb-24 lg:pb-32">
+      <div class="mx-auto max-w-7xl px-6 lg:px-8">
+        <a
+          href={`${base}industries`}
+          class="inline-flex items-center gap-2 text-sm text-muted transition-colors hover:text-accent"
+        >
+          &larr; All Industries
+        </a>
+        <SectionLabel text="Industry AI and Technology" />
+        <h1 class="mt-4 max-w-4xl font-display text-5xl text-light lg:text-7xl">
+          You built something the world has never seen. Now make sure the world
+          understands it.
+        </h1>
+        <p class="mt-6 max-w-2xl text-lg leading-relaxed text-light/50">
+          From foundation models to robotics, AI hardware to development tools,
+          the businesses reshaping how the world works are the ones that
+          can&rsquo;t afford to be misunderstood.
+        </p>
+        <p class="mt-4 max-w-2xl text-base leading-relaxed text-light/50">
+          Buying an AI solution carries real professional risk for the people
+          making the decision. The businesses that acknowledge that risk and
+          address it through their content are the ones that earn the contract.
+        </p>
+      </div>
+    </section>
+
+    <section class="bg-light py-24 lg:py-32">
+      <div class="mx-auto max-w-7xl px-6 lg:px-8">
+        <SectionLabel text="What We See" light />
+        <h2 class="mt-4 max-w-4xl font-display text-3xl text-dark lg:text-5xl">
+          The AI industry has a communication problem that is costing
+          businesses at every stage of growth.
+        </h2>
+        <div class="mt-8 max-w-3xl space-y-4 text-base leading-loose text-muted">
+          <p>
+            Most AI businesses are built by people who understand the technology
+            deeply and struggle to explain it simply. The result is websites
+            full of technical language that impresses peers and confuses buyers,
+            content strategies that speak to the wrong audience, and marketing
+            that generates noise without generating trust.
+          </p>
+          <p>
+            At the same time, the AI space is crowded and getting more crowded
+            by the day. Buyers are sceptical, overwhelmed with options, and
+            increasingly cautious about who they trust with something as
+            significant as artificial intelligence. The businesses cutting
+            through that noise aren&rsquo;t the ones with the most
+            sophisticated technology. They&rsquo;re the ones with the clearest
+            story.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <section class="bg-dark py-24 lg:py-32">
+      <div class="mx-auto max-w-7xl px-6 lg:px-8">
+        <SectionLabel text="The Quillmop Approach" />
+        <h2 class="mt-4 max-w-4xl font-display text-4xl text-light lg:text-5xl">
+          We translate what your technology does into language that makes your
+          buyers act.
+        </h2>
+        <p class="mt-6 max-w-3xl text-base leading-relaxed text-light/50">
+          We work with AI startups, scale-ups, and established technology
+          businesses to build content that bridges the gap between what
+          they&rsquo;ve built and what their buyers need to hear. Technical
+          enough to be credible. Human enough to be compelling.
+        </p>
+
+        <div class="mt-16 grid gap-8 md:grid-cols-2">
+          {
+            helpItems.map((item) => (
+              <div class="border-l-2 border-accent pl-8">
+                <h3 class="font-display text-xl text-light">{item.title}</h3>
+                <p class="mt-3 text-sm leading-relaxed text-light/50">
+                  {item.text}
+                </p>
+              </div>
+            ))
+          }
+        </div>
+      </div>
+    </section>
+
+    <section class="bg-light py-24 lg:py-32">
+      <div class="mx-auto max-w-7xl px-6 lg:px-8">
+        <SectionLabel text="Real Results" light />
+        <h2 class="mt-4 max-w-3xl font-display text-4xl text-dark lg:text-5xl">
+          What happens when an AI business learns to speak its buyers&rsquo;
+          language.
+        </h2>
+
+        <div class="mt-12 border border-border-light bg-white p-8 lg:p-12">
+          <span class="inline-block border border-border-light px-3 py-1 text-xs font-medium text-muted">
+            Case Study
+          </span>
+          <h3 class="mt-4 font-display text-2xl text-dark">
+            An AI startup that turned complexity into its biggest competitive
+            advantage
+          </h3>
+          <p class="mt-4 text-base leading-loose text-muted">
+            An early stage AI startup had built genuinely innovative technology
+            but was struggling to communicate its value to non-technical buyers.
+            Their website was dense, their messaging was inconsistent, and their
+            content strategy was nonexistent. We rebuilt their messaging from
+            the ground up, rewrote their entire website, and produced a content
+            programme targeting their ideal buyer profile. Within five months,
+            their sales cycle had shortened by 40%, inbound enquiries had
+            tripled, and they closed their first enterprise contract with a
+            buyer who had found them through a thought leadership article.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <section class="bg-dark py-24 lg:py-32">
+      <div class="mx-auto max-w-7xl px-6 lg:px-8">
+        <SectionLabel text="Built For You" />
+        <h2 class="mt-4 max-w-3xl font-display text-4xl text-light lg:text-5xl">
+          Content that makes complex technology impossible to ignore and easy to
+          buy.
+        </h2>
+        <div class="mt-12 grid gap-4 sm:grid-cols-2 lg:grid-cols-4">
+          {
+            services.map((s) => (
+              <div class="border border-border bg-dark-soft px-5 py-4 text-sm text-light/70">
+                {s}
+              </div>
+            ))
+          }
+        </div>
+        <div class="mt-12">
+          <Button href={`${base}contact`}
+            >Talk To Us About Your Business &rarr;</Button
+          >
+        </div>
+      </div>
+    </section>
+  </main>
+  <Footer />
+</Layout>

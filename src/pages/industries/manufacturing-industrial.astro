@@ -1,0 +1,124 @@
+---
+import Layout from "../../layouts/Layout.astro";
+import Navbar from "../../components/Navbar.astro";
+import Footer from "../../components/Footer.astro";
+import SectionLabel from "../../components/SectionLabel.astro";
+import Button from "../../components/Button.astro";
+const base = import.meta.env.BASE_URL;
+
+const services = [
+  "Technical Articles and White Papers",
+  "SEO and GEO Content Strategy",
+  "Case Study Writing",
+  "Website and Product Page Copywriting",
+  "Email and Nurture Campaign Content",
+  "Content Audits",
+  "Thought Leadership and Industry Commentary",
+];
+
+const helpItems = [
+  {
+    title: "Technical Content and Guides",
+    text: "We produce in-depth guides, white papers, and technical articles that answer the questions your buyers are researching, positioning your business as the most knowledgeable supplier in your category.",
+  },
+  {
+    title: "SEO and GEO for Industrial Markets",
+    text: "We identify the specific search terms your buyers use at every stage of their research and build content that captures that traffic, including optimisation for AI tools increasingly used in B2B procurement research.",
+  },
+  {
+    title: "Case Studies and Capability Content",
+    text: "We turn your completed projects and production capabilities into detailed case studies that give procurement teams and technical buyers exactly the evidence they need to move forward.",
+  },
+  {
+    title: "Website and Product Page Copywriting",
+    text: "We rewrite your website and product pages to speak directly to the technical and commercial priorities of your buyers, not just describe what you make.",
+  },
+];
+---
+
+<Layout
+  title="Manufacturing and Industrial — Quillmop"
+  description="Content and marketing services for manufacturing and industrial businesses. We build the content presence that keeps you front of mind throughout your buyers' research journey."
+>
+  <Navbar />
+  <main>
+    <section class="bg-dark pt-36 pb-24 lg:pb-32">
+      <div class="mx-auto max-w-7xl px-6 lg:px-8">
+        <a href={`${base}industries`} class="inline-flex items-center gap-2 text-sm text-muted transition-colors hover:text-accent">&larr; All Industries</a>
+        <SectionLabel text="Industry - Manufacturing and Industrial" />
+        <h1 class="mt-4 max-w-4xl font-display text-5xl text-light lg:text-7xl">
+          Your buyers spend months researching before they ever contact a supplier.
+        </h1>
+        <p class="mt-6 max-w-2xl text-lg leading-relaxed text-light/50">
+          In manufacturing and industrial markets, buying decisions are slow, considered, and involve multiple stakeholders. The suppliers who win are the ones who showed up consistently during every stage of that research. Content is how you do that.
+        </p>
+      </div>
+    </section>
+
+    <section class="bg-light py-24 lg:py-32">
+      <div class="mx-auto max-w-7xl px-6 lg:px-8">
+        <SectionLabel text="What We See" light />
+        <h2 class="mt-4 max-w-4xl font-display text-3xl text-dark lg:text-5xl">
+          Manufacturing businesses are invisible during the most important part of their buyers&rsquo; decision making process.
+        </h2>
+        <div class="mt-8 max-w-3xl space-y-4 text-base leading-loose text-muted">
+          <p>When a procurement manager, operations director, or plant manager starts researching a new supplier or piece of equipment, they spend weeks, sometimes months, reading, comparing, and evaluating before they make contact with anyone.</p>
+          <p>Most manufacturing companies have no presence during that entire process. No articles. No guides. No content that demonstrates capability, builds familiarity, or answers the technical questions their buyers are asking. They&rsquo;re waiting to be found on a supplier list while their competitors are being found on Google.</p>
+          <p>That gap is the opportunity.</p>
+        </div>
+      </div>
+    </section>
+
+    <section class="bg-dark py-24 lg:py-32">
+      <div class="mx-auto max-w-7xl px-6 lg:px-8">
+        <SectionLabel text="The Quillmop Approach" />
+        <h2 class="mt-4 max-w-4xl font-display text-4xl text-light lg:text-5xl">
+          We build the content presence that keeps your business front of mind throughout your buyers&rsquo; entire research journey.
+        </h2>
+        <p class="mt-6 max-w-3xl text-base leading-relaxed text-light/50">
+          We work with manufacturing and industrial businesses to create content that speaks the language of their buyers, technical enough to be credible, clear enough to be useful, and strategic enough to generate enquiries from companies that are ready to buy.
+        </p>
+        <div class="mt-16 grid gap-8 md:grid-cols-2">
+          {helpItems.map((item) => (
+            <div class="border-l-2 border-accent pl-8">
+              <h3 class="font-display text-xl text-light">{item.title}</h3>
+              <p class="mt-3 text-sm leading-relaxed text-light/50">{item.text}</p>
+            </div>
+          ))}
+        </div>
+      </div>
+    </section>
+
+    <section class="bg-light py-24 lg:py-32">
+      <div class="mx-auto max-w-7xl px-6 lg:px-8">
+        <SectionLabel text="Real Results" light />
+        <h2 class="mt-4 max-w-3xl font-display text-4xl text-dark lg:text-5xl">
+          What happens when a manufacturer stops being invisible to its own buyers.
+        </h2>
+        <div class="mt-12 border border-border-light bg-white p-8 lg:p-12">
+          <span class="inline-block border border-border-light px-3 py-1 text-xs font-medium text-muted">Case Study</span>
+          <h3 class="mt-4 font-display text-2xl text-dark">An industrial equipment supplier that built a pipeline from content alone</h3>
+          <p class="mt-4 text-base leading-loose text-muted">A specialist industrial equipment supplier had an excellent product range and almost no online presence beyond a basic website. We audited their buyers&rsquo; research journey, identified twelve high-value content opportunities, and produced a combination of technical guides, product comparison articles, and detailed case studies over six months. Organic traffic grew by 240% and the business generated eleven qualified inbound enquiries from companies they had never previously had contact with, four of which converted into contracts.</p>
+        </div>
+      </div>
+    </section>
+
+    <section class="bg-dark py-24 lg:py-32">
+      <div class="mx-auto max-w-7xl px-6 lg:px-8">
+        <SectionLabel text="Built For You" />
+        <h2 class="mt-4 max-w-3xl font-display text-4xl text-light lg:text-5xl">
+          Content built for long buying cycles, technical buyers, and high-value decisions.
+        </h2>
+        <div class="mt-12 grid gap-4 sm:grid-cols-2 lg:grid-cols-4">
+          {services.map((s) => (
+            <div class="border border-border bg-dark-soft px-5 py-4 text-sm text-light/70">{s}</div>
+          ))}
+        </div>
+        <div class="mt-12">
+          <Button href={`${base}contact`}>Talk To Us About Your Business &rarr;</Button>
+        </div>
+      </div>
+    </section>
+  </main>
+  <Footer />
+</Layout>

@@ -5,34 +5,129 @@ import Footer from "../components/Footer.astro";
 import SectionLabel from "../components/SectionLabel.astro";
 import Button from "../components/Button.astro";
 const base = import.meta.env.BASE_URL;
+
+const filters = [
+  "All",
+  "Case Studies",
+  "Pillar Pages",
+  "Free Guides",
+  "SEO",
+  "GEO",
+  "AI",
+  "Content Strategy",
+  "Digital Marketing",
+];
+
+const resourceCategories = [
+  {
+    label: "Real Results",
+    headline: "Proof that clean content drives real growth.",
+    intro: "See exactly how we've helped startups, small businesses, and large enterprises transform their content, with the numbers to back it up.",
+    cardLabel: "Case Study",
+  },
+  {
+    label: "Deep Dives",
+    headline: "Master the topics that matter most.",
+    intro: "Our pillar pages go further than any blog post can. Comprehensive, thoroughly researched, and written to be the last guide you'll ever need on a topic.",
+    cardLabel: "Pillar Page",
+  },
+  {
+    label: "Take It With You",
+    headline: "Practical tools you can use today.",
+    intro: "Checklists, templates, frameworks, and guides built for businesses that want to improve their content without wasting time figuring out where to start.",
+    cardLabel: "Free Download",
+  },
+];
 ---
 
-<Layout title="Resources — Quillmop" description="Free resources, guides, and tools from Quillmop to help your content work harder.">
+<Layout
+  title="Resources — Quillmop"
+  description="Free resources, guides, and tools from Quillmop to help your content work harder."
+>
   <Navbar />
   <main>
     <section class="bg-dark pt-36 pb-24 lg:pb-32">
       <div class="mx-auto max-w-7xl px-6 lg:px-8">
-        <SectionLabel text="Resources" />
-        <h1 class="mt-4 max-w-4xl font-display text-5xl text-light lg:text-7xl">
-          Tools and guides to sharpen your content.
+        <SectionLabel text="Free Resources" />
+        <h1
+          class="mt-4 max-w-4xl font-display text-5xl text-light lg:text-7xl"
+        >
+          Everything you need to clean up your content.
         </h1>
         <p class="mt-6 max-w-2xl text-lg leading-relaxed text-light/50">
-          Free resources from the Quillmop team to help you create better
-          content, improve your strategy, and get more from every word you
-          publish.
+          We&rsquo;ve done the work. We&rsquo;ve run the strategies, built the
+          frameworks, and learned what actually moves businesses forward.
+          Everything sitting on this page came out of real client work, and
+          we&rsquo;re giving it away because a business that learns from us is
+          a business that eventually works with us.
         </p>
       </div>
     </section>
 
-    <section class="bg-light py-24 lg:py-32">
-      <div class="mx-auto max-w-3xl px-6 text-center lg:px-8">
-        <h2 class="font-display text-3xl text-dark">Coming soon</h2>
-        <p class="mt-4 text-lg text-muted">
-          We&rsquo;re putting together guides, templates, and tools to help you
-          get the most out of your content. Check back soon.
+    <section class="bg-light py-16">
+      <div class="mx-auto max-w-7xl px-6 lg:px-8">
+        <div class="flex flex-wrap gap-3">
+          {
+            filters.map((f, i) => (
+              <button
+                class:list={[
+                  "px-5 py-2 text-sm font-medium tracking-wide transition-all duration-200",
+                  i === 0
+                    ? "bg-dark text-light"
+                    : "border border-border-light text-muted hover:border-dark hover:text-dark",
+                ]}
+              >
+                {f}
+              </button>
+            ))
+          }
+        </div>
+      </div>
+    </section>
+
+    {
+      resourceCategories.map((cat) => (
+        <section class="bg-light pb-24">
+          <div class="mx-auto max-w-7xl px-6 lg:px-8">
+            <span class="inline-block text-xs font-semibold uppercase tracking-[0.2em] text-accent">
+              {cat.label}
+            </span>
+            <h2 class="mt-3 max-w-2xl font-display text-4xl text-dark lg:text-5xl">
+              {cat.headline}
+            </h2>
+            <p class="mt-4 max-w-2xl text-base leading-relaxed text-muted">
+              {cat.intro}
+            </p>
+
+            <div class="mt-12 grid gap-6 md:grid-cols-2 lg:grid-cols-3">
+              <div class="flex flex-col items-center justify-center border border-dashed border-border-light p-12 text-center">
+                <span class="inline-block border border-border-light px-3 py-1 text-xs font-medium text-muted">
+                  {cat.cardLabel}
+                </span>
+                <p class="mt-4 text-sm text-muted">
+                  Coming soon. Check back shortly.
+                </p>
+              </div>
+            </div>
+          </div>
+        </section>
+      ))
+    }
+
+    <section class="bg-dark py-24 text-center lg:py-32">
+      <div class="mx-auto max-w-3xl px-6 lg:px-8">
+        <h2 class="font-display text-4xl text-light lg:text-5xl">
+          The resources will get you started. But your business deserves more.
+        </h2>
+        <p class="mt-4 text-lg text-light/50">
+          The gap between where your content is and where it should be has a
+          name. It&rsquo;s called strategy. Let&rsquo;s build yours.
         </p>
-        <div class="mt-10">
-          <Button href={`${base}contact`}>Get Notified</Button>
+        <div class="mt-10 flex flex-wrap items-center justify-center gap-6">
+          <Button href={`${base}#services`}>See Our Services</Button>
+          <Button href={`${base}contact`} variant="secondary"
+            >Contact Us &rarr;</Button
+          >
         </div>
       </div>
     </section>

@@ -1,0 +1,124 @@
+---
+import Layout from "../../layouts/Layout.astro";
+import Navbar from "../../components/Navbar.astro";
+import Footer from "../../components/Footer.astro";
+import SectionLabel from "../../components/SectionLabel.astro";
+import Button from "../../components/Button.astro";
+const base = import.meta.env.BASE_URL;
+
+const services = [
+  "SEO Content Strategy",
+  "GEO Optimisation",
+  "Practice Area Page Copywriting",
+  "Thought Leadership Articles",
+  "Client Newsletter Content",
+  "Content Audits",
+  "Style Guides and Tone of Voice",
+];
+
+const helpItems = [
+  {
+    title: "SEO and GEO Content",
+    text: "We identify exactly what your potential clients are searching for and build content that answers those questions better than anyone else on search engines and on AI search tools.",
+  },
+  {
+    title: "Practice Area Pages",
+    text: "We rewrite your service pages in plain English that speaks to clients, not colleagues, without losing the authority and credibility your firm has spent years building.",
+  },
+  {
+    title: "Thought Leadership",
+    text: "We turn your lawyers' expertise into articles, guides, and commentary that build reputation, attract referrals, and keep your firm front of mind with the right audience.",
+  },
+  {
+    title: "Email and Newsletter Content",
+    text: "We help firms stay connected with existing clients and referral networks through consistent, well-written communications that actually get read.",
+  },
+];
+---
+
+<Layout
+  title="Legal — Quillmop"
+  description="Content and marketing services for law firms. We translate legal expertise into content real people actually read."
+>
+  <Navbar />
+  <main>
+    <section class="bg-dark pt-36 pb-24 lg:pb-32">
+      <div class="mx-auto max-w-7xl px-6 lg:px-8">
+        <a href={`${base}industries`} class="inline-flex items-center gap-2 text-sm text-muted transition-colors hover:text-accent">&larr; All Industries</a>
+        <SectionLabel text="Industry — Legal" />
+        <h1 class="mt-4 max-w-4xl font-display text-5xl text-light lg:text-7xl">
+          The best law firm isn&rsquo;t always the one that wins the client. The most visible one is.
+        </h1>
+        <p class="mt-6 max-w-2xl text-lg leading-relaxed text-light/50">
+          Your clients are searching for answers before they ever pick up the phone. If your firm isn&rsquo;t showing up in those moments, with content that&rsquo;s clear, credible, and findable, your competitors are getting those calls instead.
+        </p>
+      </div>
+    </section>
+
+    <section class="bg-light py-24 lg:py-32">
+      <div class="mx-auto max-w-7xl px-6 lg:px-8">
+        <SectionLabel text="What We See" light />
+        <h2 class="mt-4 max-w-4xl font-display text-3xl text-dark lg:text-5xl">
+          The legal industry has a content problem it hasn&rsquo;t admitted yet.
+        </h2>
+        <div class="mt-8 max-w-3xl space-y-4 text-base leading-loose text-muted">
+          <p>Most law firm websites read like they were written for other lawyers. Dense, jargon-heavy, and completely disconnected from the way real clients search for help. The firms that are producing content are mostly doing it wrong from recycled blog posts to outdated FAQs, and pages that rank for nothing and convert nobody.</p>
+          <p>Meanwhile, the questions your potential clients are typing into Google, and increasingly into AI tools like ChatGPT and Perplexity are going unanswered by the very firms best qualified to answer them.</p>
+          <p>That&rsquo;s not a marketing problem. That&rsquo;s a visibility problem. And it&rsquo;s costing firms clients they don&rsquo;t even know they&rsquo;re losing.</p>
+        </div>
+      </div>
+    </section>
+
+    <section class="bg-dark py-24 lg:py-32">
+      <div class="mx-auto max-w-7xl px-6 lg:px-8">
+        <SectionLabel text="The Quillmop Approach" />
+        <h2 class="mt-4 max-w-4xl font-display text-4xl text-light lg:text-5xl">
+          We translate legal expertise into content real people actually read.
+        </h2>
+        <p class="mt-6 max-w-3xl text-base leading-relaxed text-light/50">
+          We work with law firms and legal professionals to build content that does three things: ranks on search engines, appears in AI-generated answers, and converts readers into enquiries. No legalese. No generic advice. Just clear, authoritative content that positions your firm as the obvious choice.
+        </p>
+        <div class="mt-16 grid gap-8 md:grid-cols-2">
+          {helpItems.map((item) => (
+            <div class="border-l-2 border-accent pl-8">
+              <h3 class="font-display text-xl text-light">{item.title}</h3>
+              <p class="mt-3 text-sm leading-relaxed text-light/50">{item.text}</p>
+            </div>
+          ))}
+        </div>
+      </div>
+    </section>
+
+    <section class="bg-light py-24 lg:py-32">
+      <div class="mx-auto max-w-7xl px-6 lg:px-8">
+        <SectionLabel text="Real Results" light />
+        <h2 class="mt-4 max-w-3xl font-display text-4xl text-dark lg:text-5xl">
+          What happens when a law firm takes content seriously.
+        </h2>
+        <div class="mt-12 border border-border-light bg-white p-8 lg:p-12">
+          <span class="inline-block border border-border-light px-3 py-1 text-xs font-medium text-muted">Case Study</span>
+          <h3 class="mt-4 font-display text-2xl text-dark">From invisible to first page in four months</h3>
+          <p class="mt-4 text-base leading-loose text-muted">A mid-size commercial law firm had seventeen practice area pages that ranked for nothing and converted nobody. We rewrote every page, built a targeted content strategy around their highest-value services, and produced twelve supporting articles. Within four months, organic enquiries had increased by 60% and three practice areas ranked on the first page of Google for their primary search terms.</p>
+        </div>
+      </div>
+    </section>
+
+    <section class="bg-dark py-24 lg:py-32">
+      <div class="mx-auto max-w-7xl px-6 lg:px-8">
+        <SectionLabel text="Built For You" />
+        <h2 class="mt-4 max-w-3xl font-display text-4xl text-light lg:text-5xl">
+          Every service we offer, applied to the specific demands of the legal industry.
+        </h2>
+        <div class="mt-12 grid gap-4 sm:grid-cols-2 lg:grid-cols-4">
+          {services.map((s) => (
+            <div class="border border-border bg-dark-soft px-5 py-4 text-sm text-light/70">{s}</div>
+          ))}
+        </div>
+        <div class="mt-12">
+          <Button href={`${base}contact`}>Talk To Us About Your Firm &rarr;</Button>
+        </div>
+      </div>
+    </section>
+  </main>
+  <Footer />
+</Layout>
