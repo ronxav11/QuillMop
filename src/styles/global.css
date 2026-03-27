@@ -4,15 +4,15 @@
   --font-display: "DM Serif Display", Georgia, serif;
   --font-body: "Inter", system-ui, sans-serif;
 
-  --color-dark: #0C0C0C;
-  --color-dark-soft: #141414;
-  --color-light: #FAF8F5;
-  --color-light-soft: #F0EDE8;
-  --color-accent: #C9A84C;
-  --color-accent-hover: #B8963A;
-  --color-muted: #6B6B6B;
-  --color-border: #2A2A2A;
-  --color-border-light: #E0DDD7;
+  --color-dark: #7D5832;
+  --color-dark-soft: #8E6840;
+  --color-light: #FAF6F0;
+  --color-light-soft: #F2EBE0;
+  --color-accent: #C08540;
+  --color-accent-hover: #A87030;
+  --color-muted: #7A6B5D;
+  --color-border: #9A7850;
+  --color-border-light: #DED3C4;
 }
 
 @layer base {
