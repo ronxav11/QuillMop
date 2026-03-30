@@ -2,7 +2,7 @@
 title: "SEO Content"
 shortTitle: "SEO"
 description: "Ranking on Google isn't luck, it's strategy. We create content built around the keywords your audience is actually searching for, structured to rank and written to convert."
-longDescription: "Search engines reward content that genuinely helps people. We build SEO content that does exactly that — answering real questions, targeting the right keywords, and giving Google every reason to rank you above your competitors. Our process combines data-driven keyword research with editorial craftsmanship so your content isn't just optimised — it's genuinely worth reading. That's what turns rankings into revenue."
+longDescription: "Search engines reward content that genuinely helps people. We build SEO content that does exactly that, answering real questions, targeting the right keywords, and giving Google every reason to rank you above your competitors. Our process combines data-driven keyword research with editorial craftsmanship so your content isn't just optimised, it's genuinely worth reading. That's what turns rankings into revenue."
 includes:
   - name: "Keyword Research"
     detail: "Deep analysis of search intent, volume, and competition to target the terms that will actually move the needle."

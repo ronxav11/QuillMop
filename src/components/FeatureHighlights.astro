@@ -1,0 +1,118 @@
+---
+import SectionLabel from "./SectionLabel.astro";
+import Button from "./Button.astro";
+const base = import.meta.env.BASE_URL;
+
+const features = [
+  {
+    label: "Content and SEO",
+    headline: "Content That Ranks and Converts",
+    description:
+      "We build content strategies that attract the right audience and keep them engaged. Every piece is built around the keywords your audience is actually searching for, structured to rank on Google, and written to turn readers into customers.",
+    tags: [
+      { text: "Strategy", href: `${base}services/content-marketing` },
+      { text: "Blog Writing", href: `${base}services/content-marketing` },
+      { text: "Keyword Research", href: `${base}services/seo-content` },
+      { text: "SEO Copywriting", href: `${base}services/seo-content` },
+      { text: "Long-Form Articles", href: `${base}services/content-marketing` },
+    ],
+    cta: { text: "Learn More", href: `${base}services/content-marketing` },
+    dark: true,
+  },
+  {
+    label: "AI and GEO",
+    headline: "Future-Proof Your Visibility",
+    description:
+      "AI is changing how people find information. We help businesses use AI the right way and optimise content to appear in AI-generated answers on ChatGPT, Gemini, and Perplexity, the new frontier of search that most businesses are completely ignoring.",
+    tags: [
+      { text: "AI Content Strategy", href: `${base}services/ai-content-solutions` },
+      { text: "Prompt Development", href: `${base}services/ai-content-solutions` },
+      { text: "AI Search Optimisation", href: `${base}services/geo-optimisation` },
+      { text: "Citation Strategy", href: `${base}services/geo-optimisation` },
+      { text: "Content Scaling", href: `${base}services/ai-content-solutions` },
+    ],
+    cta: { text: "Learn More", href: `${base}services/ai-content-solutions` },
+    dark: false,
+  },
+  {
+    label: "Digital Marketing and Editing",
+    headline: "Campaigns That Perform. Copy That Shines.",
+    description:
+      "Clicks don't pay the bills, conversions do. We create digital campaigns across email, social, and search that are built to perform. And when your existing content needs work, our editors sharpen every word until it reflects the best version of your brand.",
+    tags: [
+      { text: "Email Campaigns", href: `${base}services/digital-marketing` },
+      { text: "Social Content", href: `${base}services/digital-marketing` },
+      { text: "Paid Copy", href: `${base}services/digital-marketing` },
+      { text: "Copy Editing", href: `${base}services/editing-proofreading` },
+      { text: "Style Guides", href: `${base}services/editing-proofreading` },
+    ],
+    cta: { text: "Learn More", href: `${base}services/digital-marketing` },
+    dark: true,
+  },
+];
+---
+
+<div id="services">
+  {
+    features.map((feature) => (
+      <section
+        class:list={[
+          "py-24 lg:py-32",
+          feature.dark ? "bg-dark" : "bg-light",
+        ]}
+      >
+        <div class="mx-auto max-w-7xl px-6 lg:px-8">
+          <div data-animate>
+            <SectionLabel text={feature.label} light={!feature.dark} />
+          </div>
+
+          <h2
+            data-animate
+            class:list={[
+              "mt-4 max-w-3xl font-display text-4xl lg:text-6xl",
+              feature.dark ? "text-light" : "text-dark",
+            ]}
+          >
+            {feature.headline}
+          </h2>
+
+          <p
+            data-animate
+            class:list={[
+              "mt-6 max-w-2xl text-base leading-loose",
+              feature.dark ? "text-light/60" : "text-muted",
+            ]}
+          >
+            {feature.description}
+          </p>
+
+          <div data-animate class="mt-8 flex flex-wrap gap-3">
+            {feature.tags.map((tag) => (
+              <a
+                href={tag.href}
+                class:list={[
+                  "inline-block px-4 py-2 text-xs font-medium tracking-wide transition-all duration-200",
+                  feature.dark
+                    ? "border border-border bg-dark-soft text-light/70 hover:border-accent hover:text-accent"
+                    : "border border-border-light bg-light-soft text-dark/70 hover:border-accent hover:text-accent-hover",
+                ]}
+              >
+                {tag.text}
+              </a>
+            ))}
+          </div>
+
+          <div data-animate class="mt-8">
+            <Button
+              href={feature.cta.href}
+              variant="secondary"
+              onLight={!feature.dark}
+            >
+              {feature.cta.text} &rarr;
+            </Button>
+          </div>
+        </div>
+      </section>
+    ))
+  }
+</div>

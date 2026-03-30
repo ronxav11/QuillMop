@@ -1,0 +1,59 @@
+---
+import SectionLabel from "./SectionLabel.astro";
+const base = import.meta.env.BASE_URL;
+
+const cards = [
+  {
+    title: "No Fluff",
+    description:
+      "Every word we write earns its place. If it doesn't serve your audience or your goals, it gets cut. No filler. No padding. Just content that works.",
+    link: { text: "Learn More", href: `${base}about` },
+  },
+  {
+    title: "Strategy First",
+    description:
+      "We won't touch a keyboard until we know exactly what your content needs to achieve. Good writing without strategy is just noise.",
+    link: { text: "Learn More", href: `${base}about` },
+  },
+  {
+    title: "Results That Matter",
+    description:
+      "Traffic, leads, open rates, conversions. We tie every piece of content to numbers that matter to your bottom line.",
+    link: { text: "Learn More", href: `${base}about` },
+  },
+];
+---
+
+<section class="bg-dark py-24 lg:py-32">
+  <div class="mx-auto max-w-7xl px-6 lg:px-8">
+    <div data-animate class="text-center">
+      <SectionLabel text="The Quillmop Difference" />
+      <h2 class="mx-auto mt-4 max-w-3xl font-display text-4xl text-light lg:text-5xl">
+        The Content Partner You Can Trust
+      </h2>
+    </div>
+
+    <div class="mt-16 grid gap-8 md:grid-cols-3">
+      {
+        cards.map((card, i) => (
+          <div
+            data-animate
+            style={`animation-delay: ${i * 120}ms`}
+            class="border border-border bg-dark-soft p-8 lg:p-10"
+          >
+            <h3 class="font-display text-2xl text-light">{card.title}</h3>
+            <p class="mt-4 text-sm leading-relaxed text-light/50">
+              {card.description}
+            </p>
+            <a
+              href={card.link.href}
+              class="mt-6 inline-flex text-sm font-medium text-accent transition-colors duration-200 hover:text-accent-hover"
+            >
+              {card.link.text} &rarr;
+            </a>
+          </div>
+        ))
+      }
+    </div>
+  </div>
+</section>

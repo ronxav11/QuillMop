@@ -4,27 +4,33 @@ import SectionLabel from "./SectionLabel.astro";
 const steps = [
   {
     number: "01",
-    title: "We Listen First",
+    title: "The Content Audit Call (Week 1)",
     description:
-      "Before we write a single word, we learn your business, your audience, and your goals. No assumptions. No templates. Just a clear picture of what your content needs to do.",
+      "A 45-minute working session where we review everything you have: your blog, your emails, your SEO footprint, your social, all of it. You leave with a written gap analysis, not a sales deck.",
   },
   {
     number: "02",
-    title: "We Build the Plan",
+    title: "The Strategy Brief (Week 1\u20132)",
     description:
-      "We map out exactly what to create, where to publish it, and how to measure success. You get a strategy you can see, understand, and hold us to.",
+      "A document that maps your audience, your content gaps, your keyword opportunities, and your publishing plan. Every service we run, whether that\u2019s SEO content, email campaigns, or GEO optimisation, ties back to this. It\u2019s your north star and ours.",
   },
   {
     number: "03",
-    title: "We Get to Work",
+    title: "Production Across Every Channel (Ongoing)",
     description:
-      "Our writers and editors produce content that sounds like you, only sharper, cleaner, and more persuasive. Every draft goes through rigorous review before it reaches you.",
+      "Blog posts. Email campaigns. SEO copy. AI-assisted content. Edited and proofread to standard. Whatever your business needs, built to a plan with intention. One round of feedback. Clean handoffs. No chasing.",
   },
   {
     number: "04",
-    title: "We Track and Improve",
+    title: "Optimise and Distribute (Ongoing)",
     description:
-      "Publishing is just the beginning. We monitor performance and refine continuously so your content compounds in value over time.",
+      "Publishing is step one. We make sure your content is structured for Google, visible to AI answer engines, and reaching the right audience through the right channels: email, search, social, wherever your buyers actually are.",
+  },
+  {
+    number: "05",
+    title: "The Monthly Scorecard (Every 30 days)",
+    description:
+      "Traffic, rankings, open rates, conversions, AI visibility: whatever we agreed matters. Plain language. No vanity metrics. Just an honest read on what your content is doing for your business.",
   },
 ];
 ---
@@ -35,14 +41,18 @@ const steps = [
       <SectionLabel text="The Process" />
     </div>
 
-    <h2 data-animate class="mt-4 font-display text-4xl text-light lg:text-6xl">
-      Simple. Structured. Spotless.
+    <h2 data-animate class="mt-4 max-w-3xl font-display text-4xl text-light lg:text-6xl">
+      From audit to published, every step accounted for, every deliverable on time.
     </h2>
 
-    <div data-animate class="mt-16 grid gap-px bg-border md:grid-cols-2 lg:grid-cols-4">
+    <div class="mt-16 grid gap-px bg-border md:grid-cols-2 lg:grid-cols-3">
       {
-        steps.map((step) => (
-          <div class="bg-dark p-8 lg:p-10">
+        steps.map((step, i) => (
+          <div
+            data-animate
+            style={`animation-delay: ${i * 120}ms`}
+            class="bg-dark p-8 lg:p-10"
+          >
             <span class="font-display text-5xl text-accent/30 lg:text-6xl">
               {step.number}
             </span>
@@ -53,6 +63,7 @@ const steps = [
           </div>
         ))
       }
+      <div class="hidden bg-dark lg:block"></div>
     </div>
   </div>
 </section>

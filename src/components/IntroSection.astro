@@ -1,0 +1,81 @@
+---
+import SectionLabel from "./SectionLabel.astro";
+import Button from "./Button.astro";
+const base = import.meta.env.BASE_URL;
+---
+
+<section class="bg-light py-24 lg:py-32">
+  <div class="mx-auto max-w-7xl px-6 lg:px-8">
+    <div data-animate>
+      <SectionLabel text="What We Do" light />
+    </div>
+
+    <p
+      data-animate
+      class="mt-6 max-w-3xl text-base leading-loose text-muted"
+    >
+      Quillmop is a content and digital marketing agency used by startups and
+      enterprises to create strategic content, improve search visibility,
+      optimise for AI answer engines, and drive measurable business growth.
+    </p>
+
+    <p
+      data-animate
+      class="mt-4 max-w-3xl text-base leading-loose text-muted"
+    >
+      With Quillmop, your business gets sharp editorial expertise, proven
+      marketing strategy, and intelligent content systems.
+    </p>
+
+    <h3
+      data-animate
+      class="mt-12 max-w-3xl font-display text-3xl text-dark lg:text-4xl"
+    >
+      Why not just use AI?
+    </h3>
+
+    <p
+      data-animate
+      class="mt-6 max-w-3xl text-base leading-loose text-muted"
+    >
+      You can. But AI doesn&rsquo;t do the work, it assists with it.
+    </p>
+
+    <p
+      data-animate
+      class="mt-4 max-w-3xl text-base leading-loose text-muted"
+    >
+      Every piece of content your business publishes still requires someone to
+      identify the topic, do the research, write the brief, enter the prompts,
+      evaluate what comes back, rewrite what doesn&rsquo;t work, edit for
+      accuracy, refine the tone, check it against your brand, format it
+      correctly, get it published, and more. That is the process for one piece
+      of content. Your business needs dozens every month across your blog, your
+      emails, your social channels, and your SEO strategy.
+    </p>
+
+    <p
+      data-animate
+      class="mt-4 max-w-3xl text-base leading-loose text-muted"
+    >
+      One person can keep up with some of that, some of the time. A small team
+      can cover more ground, but not without corners being cut, deadlines being
+      missed, or channels going quiet for weeks at a time. The content that was
+      supposed to build your business becomes the task that keeps getting pushed
+      to tomorrow.
+    </p>
+
+    <p
+      data-animate
+      class="mt-4 max-w-3xl text-base font-medium leading-loose text-dark"
+    >
+      Quillmop is the team your business needs without the overhead of hiring one.
+    </p>
+
+    <div data-animate class="mt-8">
+      <Button href={`${base}services`} variant="secondary" onLight
+        >Learn More &rarr;</Button
+      >
+    </div>
+  </div>
+</section>

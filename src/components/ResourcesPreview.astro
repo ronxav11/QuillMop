@@ -1,0 +1,81 @@
+---
+import SectionLabel from "./SectionLabel.astro";
+import Button from "./Button.astro";
+const base = import.meta.env.BASE_URL;
+
+const resources = [
+  {
+    label: "Latest Article",
+    title: "How businesses are losing customers through bad content",
+    description:
+      "We break down the most common content mistakes we see across every industry, and what to do instead.",
+    href: `${base}blog`,
+  },
+  {
+    label: "Free Resource",
+    title: "The content audit checklist every business needs",
+    description:
+      "A practical framework for evaluating your existing content and finding the gaps that are costing you traffic and conversions.",
+    href: `${base}resources`,
+  },
+  {
+    label: "Popular",
+    title: "SEO vs GEO: what your business needs to know in 2026",
+    description:
+      "AI search is changing the game. Here's how to make sure your content shows up in both traditional and AI-powered search results.",
+    href: `${base}blog`,
+  },
+];
+---
+
+<section class="bg-light py-24 lg:py-32">
+  <div class="mx-auto max-w-7xl px-6 lg:px-8">
+    <div data-animate>
+      <SectionLabel text="Resources" light />
+    </div>
+
+    <h2
+      data-animate
+      class="mt-4 max-w-3xl font-display text-4xl text-dark lg:text-5xl"
+    >
+      Build your expertise.
+    </h2>
+
+    <p data-animate class="mt-4 max-w-2xl text-base text-muted">
+      Insights, guides, and tools from the Quillmop team to help your content
+      work harder.
+    </p>
+
+    <div class="mt-12 grid gap-6 md:grid-cols-3">
+      {
+        resources.map((r, i) => (
+          <a
+            href={r.href}
+            data-animate
+            style={`animation-delay: ${i * 120}ms`}
+            class="group block border border-border-light bg-light-soft p-8 transition-all duration-300 hover:-translate-y-1 hover:shadow-xl hover:shadow-dark/5"
+          >
+            <span class="inline-block text-xs font-semibold uppercase tracking-[0.15em] text-accent">
+              {r.label}
+            </span>
+            <h3 class="mt-3 font-display text-xl text-dark transition-colors duration-300 group-hover:text-accent-hover">
+              {r.title}
+            </h3>
+            <p class="mt-3 text-sm leading-relaxed text-muted">
+              {r.description}
+            </p>
+          </a>
+        ))
+      }
+    </div>
+
+    <div data-animate class="mt-10 flex flex-wrap gap-6">
+      <Button href={`${base}blog`} variant="secondary" onLight
+        >View All Articles &rarr;</Button
+      >
+      <Button href={`${base}resources`} variant="secondary" onLight
+        >Browse Resources &rarr;</Button
+      >
+    </div>
+  </div>
+</section>

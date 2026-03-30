@@ -1,0 +1,58 @@
+---
+import SectionLabel from "./SectionLabel.astro";
+import Button from "./Button.astro";
+const base = import.meta.env.BASE_URL;
+
+const reasons = [
+  "Configurable strategies built around your business, not templates",
+  "AI-assisted workflows for faster, smarter delivery",
+  "Every piece of content tied to measurable business outcomes",
+  "A dedicated team from brief to publish",
+  "Built for startups through to enterprise",
+  "Up and running in days, not weeks",
+];
+---
+
+<section class="bg-dark py-24 lg:py-32">
+  <div class="mx-auto max-w-7xl px-6 lg:px-8">
+    <div data-animate>
+      <SectionLabel text="Why Quillmop?" />
+    </div>
+
+    <h2
+      data-animate
+      class="mt-4 max-w-3xl font-display text-4xl text-light lg:text-5xl"
+    >
+      The content agency your team will actually want to work with.
+    </h2>
+
+    <p
+      data-animate
+      class="mt-6 max-w-2xl text-base leading-relaxed text-light/50"
+    >
+      Level up with a content partner backed by real industry expertise and
+      trusted by businesses across six industries.
+    </p>
+
+    <ul class="mt-12 grid gap-4 sm:grid-cols-2 lg:max-w-3xl">
+      {
+        reasons.map((reason, i) => (
+          <li
+            data-animate
+            style={`animation-delay: ${i * 100}ms`}
+            class="flex items-start gap-3"
+          >
+            <span class="mt-1 text-accent">&#10003;</span>
+            <span class="text-sm leading-relaxed text-light/70">{reason}</span>
+          </li>
+        ))
+      }
+    </ul>
+
+    <div data-animate class="mt-12">
+      <Button href={`${base}about`} variant="secondary"
+        >More About Us &rarr;</Button
+      >
+    </div>
+  </div>
+</section>
